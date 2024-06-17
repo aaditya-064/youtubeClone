@@ -1,0 +1,35 @@
+<div class="content" style="width: 100%">
+              <img
+                src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                width="100%"
+                height="230px"
+                class="rounded"
+              />
+              <div class="bottom_content py-2 d-flex">
+                <img
+                  src="/assets/profile.png"
+                  alt=""
+                  width="38px"
+                  height="38px"
+                />
+                <div class="d-flex flex-column w-75 px-2">
+                  <a href="#" class="title_ text-decoration-none text-light"
+                    >Python Tutorial For Beginners in Hindi | Complete Python
+                    Course</a
+                  >
+                  <a
+                    href="#"
+                    class="h4 text-decoration-none text-secondary mt-2"
+                    style="font-size: 15px"
+                    >CodeWithHarry</a
+                  >
+                  <a
+                    href="#"
+                    class="text-decoration-none text-secondary"
+                    style="margin-top: -10px"
+                    >32K views 7 hours ago</a
+                  >
+                </div>
+              </div>
+            </div>

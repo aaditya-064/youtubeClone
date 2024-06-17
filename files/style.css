@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.brandName_{
+    font-family: arial;
+}
+
+.searchBox_{
+    border-radius: 30px;
+}
+
+.title_{
+  line-height: 20px;
+}

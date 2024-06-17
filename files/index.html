@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/2c92abfc3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-bs-theme="dark" style="background: #0f0f0f">
+    <nav
+      class="navbar navbar-expand-lg position-sticky w-100 top-0"
+      style="background: #0f0f0f; height: 60px"
+    >
+      <div class="container-fluid d-flex">
+        <a class="navbar-brand" href="#"
+          ><img src="/assets/menuButton.png" alt="" width="20px" height="20px"
+        /></a>
+        <!-- <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link d-flex gap-1" href="#">
+                <img
+                  src="/assets/youtube.png"
+                  alt=""
+                  width="35px"
+                  height="35px"
+                />
+                <p class="fs-4 brandName_ text-light">YouTube</p>
+              </a>
+            </li>
+          </ul>
+          <form class="d-flex mx-auto w-50" role="search">
+            <input
+              class="searchBox_ form-control me-2 w-75 outline-0"
+              style="background: #0f0f0f; border-color: #303030; height: 40px"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="rounded-pill outline-0 fs-5 border-0 position-relative"
+              style="width: 40px; height: 40px; background: #272727"
+            >
+              <img
+                src="/assets/microphone.png"
+                style="position: absolute; top: 25%; left: 25%"
+                alt=""
+                width="20px"
+                height="20px"
+              />
+            </button>
+          </form>
+          <div class="ms-auto d-flex gap-4 align-items-center">
+            <a href="#" class="fs-5 text-light"
+              ><img
+                src="/assets/createVideo.png"
+                alt=""
+                width="25px"
+                height="25px"
+            /></a>
+            <a href="#" class="fs-5 position-relative text-light"
+              ><img
+                src="/assets/notifications.png"
+                alt=""
+                width="23px"
+                height="23px"
+              />
+              <!-- <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                99+
+                <span class="visually-hidden">unread messages</span>
+              </span> -->
+            </a>
+            <a href="#"
+              ><img src="/assets/profile.png" alt="" width="35px" height="35px"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div
+        class="col-xxl-2 col-xl-2 col-lg-2 col-md-1 d-sm-none d-xxl-inline-block d-xl-inline-block d-lg-inline-block position-sticky left-0 top-0"
+      >
+        <!-- first row -->
+        <ul class="nav flex-column border-bottom pb-3">
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="#"
+              ><img src="/assets/home.png" alt="" width="20px" height="20px" />
+              <span class="ms-4 d-md-none d-sm-none d-xxl-inline-block"
+                >Home</span
+              ></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">
+              <img
+                src="/assets/youtubeShorts.png"
+                alt=""
+                width="20px"
+                height="20px"
+              />
+              <span class="ms-4 d-md-none d-sm-none d-xxl-inline-block"
+                >Shorts</span
+              >
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#"
+              ><img
+                src="/assets/youtubeSubscriptions.png"
+                alt=""
+                width="20px"
+                height="20px"
+              />
+              <span class="ms-4 d-md-none d-sm-none d-xxl-inline-block"
+                >Subscriptions</span
+              ></a
+            >
+          </li>
+        </ul>
+
+        <!-- second row -->
+        <div class="pt-3 border-bottom">
+          <a href="" class="text-light text-decoration-none fs-5 ms-2"
+            >You <span><i class="fa-solid fa-chevron-right fs-6 ms-2"></i></span
+          ></a>
+          <ul class="nav flex-column border-bottom pb-3">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="#"
+                ><img
+                  src="/assets/youtubeSubscriptions.png"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Your Channel</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <img
+                  src="/assets/history.png"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >History</span
+                >
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/playlist.png"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Playlists</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/yourVideos.png"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Your videos</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/watchLater.png"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Watch Later</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/likedVideos.png"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Liked videos</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- third row -->
+        <div class="pt-3 border-bottom d-md-none d-sm-none d-xxl-inline-block">
+          <a href="" class="text-light text-decoration-none fs-5 ms-2"
+            >Subscriptions
+          </a>
+          <ul class="nav flex-column border-bottom pb-3">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="#"
+                ><img
+                  src="/assets/englishSpeeches.jpg"
+                  alt=""
+                  class="rounded-pill"
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3">English Speeches</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <img
+                  src="/assets/quotes.jpg"
+                  alt=""
+                  class="rounded-pill"
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3">Quotes</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/osho.jpg"
+                  alt=""
+                  class="rounded-pill"
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3">Rajneesh Acharya</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/AadityaShrestha.png"
+                  alt=""
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3">Aaditya Shrestha</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/hitler.png"
+                  alt=""
+                  class="rounded-pill object-fit-cover"
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3">Adolf Hitler</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/nazi.png"
+                  alt=""
+                  class="object-fit-cover rounded-pill"
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3">Nazi vs Jews</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/Thomas_shelby.jpg"
+                  alt=""
+                  class="rounded-pill object-fit-cover"
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3">Thomas Shelby</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- explore section -->
+        <div class="pt-3 border-bottom">
+          <a href="" class="text-light text-decoration-none fs-5 ms-2"
+            >Explore
+          </a>
+          <ul class="nav flex-column border-bottom pb-3">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="#"
+                ><img
+                  src="/assets/trending.png"
+                  alt=""
+                  class="rounded-pill"
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Trending</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <img
+                  src="/assets/music.png"
+                  alt=""
+                  class="rounded-pill"
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Music</span
+                >
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/game-controller.png"
+                  alt=""
+                  class="rounded-pill"
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Gaming</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/trophy.png"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Sport</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- more from youtube -->
+        <div class="pt-3 border-bottom">
+          <a href="" class="text-light text-decoration-none fs-5 ms-2"
+            >More
+            <span class="d-md-none d-sm-none d-xxl-inline-block"
+              >from YouTube
+            </span>
+          </a>
+          <ul class="nav flex-column border-bottom pb-3">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="#"
+                ><img
+                  src="/assets/youtube.png"
+                  alt=""
+                  class="rounded-pill"
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >YouTube Premium</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <img
+                  src="/assets/youtube.png"
+                  alt=""
+                  class="rounded-pill"
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >YouTube Studio</span
+                >
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/youtubeMusic.png"
+                  alt=""
+                  class="rounded-pill"
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >YouTube Music</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/youtube-kids.png"
+                  alt=""
+                  width="25px"
+                  height="25px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >YouTube Kids</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- settings -->
+        <div class="pt-3 border-bottom">
+          <a href="" class="text-light text-decoration-none fs-5 ms-2"
+            >Explore
+          </a>
+          <ul class="nav flex-column border-bottom pb-3">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="#"
+                ><img
+                  src="/assets/settings.png"
+                  alt=""
+                  class="rounded-pill"
+                  width="20px"
+                  height="20px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Settings</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">
+                <img
+                  src="/assets/flags.png"
+                  alt=""
+                  class="rounded-pill"
+                  width="20px"
+                  height="20px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Report history</span
+                >
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/question.png"
+                  alt=""
+                  class="rounded-pill"
+                  width="20px"
+                  height="20px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Help</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"
+                ><img
+                  src="/assets/feedback.png"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <span class="ms-3 d-md-none d-sm-none d-xxl-inline-block"
+                  >Send feedback</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xl-10 col-lg-10 col-md-10 mt-2">
+        <ul class="nav nav-pills d-flex gap-2 ms-3">
+          <li class="nav-item">
+            <a
+              class="nav-link text-light"
+              style="background: #272727; height: 30px"
+              aria-current="page"
+              href="#"
+              >All</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light"
+              style="background: #272727"
+              aria-current="page"
+              href="#"
+              >Thoughts</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Intelligence</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Words</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Computer Programming</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Seminars</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Information</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Public speaking event</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Podcasts</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Recently Uploaded</a
+            >
+          </li>
+        </ul>
+        <div class="row py-4 ms-2">
+          <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="content" style="width: 100%">
+              <img
+                src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                width="100%"
+                height="230px"
+                class="rounded"
+              />
+              <div class="bottom_content py-2 d-flex">
+                <img
+                  src="/assets/profile.png"
+                  alt=""
+                  width="38px"
+                  height="38px"
+                />
+                <div class="d-flex flex-column w-75 px-2">
+                  <a href="#" class="title_ text-decoration-none text-light"
+                    >Python Tutorial For Beginners in Hindi | Complete Python
+                    Course</a
+                  >
+                  <a
+                    href="#"
+                    class="h4 text-decoration-none text-secondary mt-2"
+                    style="font-size: 15px"
+                    >CodeWithHarry</a
+                  >
+                  <a
+                    href="#"
+                    class="text-decoration-none text-secondary"
+                    style="margin-top: -10px"
+                    >32K views 7 hours ago</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="content" style="width: 100%">
+              <img
+                src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                width="100%"
+                height="230px"
+                class="rounded"
+              />
+              <div class="bottom_content py-2 d-flex">
+                <img
+                  src="/assets/profile.png"
+                  alt=""
+                  width="38px"
+                  height="38px"
+                />
+                <div class="d-flex flex-column w-75 px-2">
+                  <a href="#" class="title_ text-decoration-none text-light"
+                    >Python Tutorial For Beginners in Hindi | Complete Python
+                    Course</a
+                  >
+                  <a
+                    href="#"
+                    class="h4 text-decoration-none text-secondary mt-2"
+                    style="font-size: 15px"
+                    >CodeWithHarry</a
+                  >
+                  <a
+                    href="#"
+                    class="text-decoration-none text-secondary"
+                    style="margin-top: -10px"
+                    >32K views 7 hours ago</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="content" style="width: 100%">
+              <img
+                src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                width="100%"
+                height="230px"
+                class="rounded"
+              />
+              <div class="bottom_content py-2 d-flex">
+                <img
+                  src="/assets/profile.png"
+                  alt=""
+                  width="38px"
+                  height="38px"
+                />
+                <div class="d-flex flex-column w-75 px-2">
+                  <a href="#" class="title_ text-decoration-none text-light"
+                    >Python Tutorial For Beginners in Hindi | Complete Python
+                    Course</a
+                  >
+                  <a
+                    href="#"
+                    class="h4 text-decoration-none text-secondary mt-2"
+                    style="font-size: 15px"
+                    >CodeWithHarry</a
+                  >
+                  <a
+                    href="#"
+                    class="text-decoration-none text-secondary"
+                    style="margin-top: -10px"
+                    >32K views 7 hours ago</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="content" style="width: 100%">
+              <img
+                src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                width="100%"
+                height="230px"
+                class="rounded"
+              />
+              <div class="bottom_content py-2 d-flex">
+                <img
+                  src="/assets/profile.png"
+                  alt=""
+                  width="38px"
+                  height="38px"
+                />
+                <div class="d-flex flex-column w-75 px-2">
+                  <a href="#" class="title_ text-decoration-none text-light"
+                    >Python Tutorial For Beginners in Hindi | Complete Python
+                    Course</a
+                  >
+                  <a
+                    href="#"
+                    class="h4 text-decoration-none text-secondary mt-2"
+                    style="font-size: 15px"
+                    >CodeWithHarry</a
+                  >
+                  <a
+                    href="#"
+                    class="text-decoration-none text-secondary"
+                    style="margin-top: -10px"
+                    >32K views 7 hours ago</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="content" style="width: 100%">
+              <img
+                src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                width="100%"
+                height="230px"
+                class="rounded"
+              />
+              <div class="bottom_content py-2 d-flex">
+                <img
+                  src="/assets/profile.png"
+                  alt=""
+                  width="38px"
+                  height="38px"
+                />
+                <div class="d-flex flex-column w-75 px-2">
+                  <a href="#" class="title_ text-decoration-none text-light"
+                    >Python Tutorial For Beginners in Hindi | Complete Python
+                    Course</a
+                  >
+                  <a
+                    href="#"
+                    class="h4 text-decoration-none text-secondary mt-2"
+                    style="font-size: 15px"
+                    >CodeWithHarry</a
+                  >
+                  <a
+                    href="#"
+                    class="text-decoration-none text-secondary"
+                    style="margin-top: -10px"
+                    >32K views 7 hours ago</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="content" style="width: 100%">
+              <img
+                src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                width="100%"
+                height="230px"
+                class="rounded"
+              />
+              <div class="bottom_content py-2 d-flex">
+                <img
+                  src="/assets/profile.png"
+                  alt=""
+                  width="38px"
+                  height="38px"
+                />
+                <div class="d-flex flex-column w-75 px-2">
+                  <a href="#" class="title_ text-decoration-none text-light"
+                    >Python Tutorial For Beginners in Hindi | Complete Python
+                    Course</a
+                  >
+                  <a
+                    href="#"
+                    class="h4 text-decoration-none text-secondary mt-2"
+                    style="font-size: 15px"
+                    >CodeWithHarry</a
+                  >
+                  <a
+                    href="#"
+                    class="text-decoration-none text-secondary"
+                    style="margin-top: -10px"
+                    >32K views 7 hours ago</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="content" style="width: 100%">
+              <img
+                src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                width="100%"
+                height="230px"
+                class="rounded"
+              />
+              <div class="bottom_content py-2 d-flex">
+                <img
+                  src="/assets/profile.png"
+                  alt=""
+                  width="38px"
+                  height="38px"
+                />
+                <div class="d-flex flex-column w-75 px-2">
+                  <a href="#" class="title_ text-decoration-none text-light"
+                    >Python Tutorial For Beginners in Hindi | Complete Python
+                    Course</a
+                  >
+                  <a
+                    href="#"
+                    class="h4 text-decoration-none text-secondary mt-2"
+                    style="font-size: 15px"
+                    >CodeWithHarry</a
+                  >
+                  <a
+                    href="#"
+                    class="text-decoration-none text-secondary"
+                    style="margin-top: -10px"
+                    >32K views 7 hours ago</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="content" style="width: 100%">
+              <img
+                src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                width="100%"
+                height="230px"
+                class="rounded"
+              />
+              <div class="bottom_content py-2 d-flex">
+                <img
+                  src="/assets/profile.png"
+                  alt=""
+                  width="38px"
+                  height="38px"
+                />
+                <div class="d-flex flex-column w-75 px-2">
+                  <a href="#" class="title_ text-decoration-none text-light"
+                    >Python Tutorial For Beginners in Hindi | Complete Python
+                    Course</a
+                  >
+                  <a
+                    href="#"
+                    class="h4 text-decoration-none text-secondary mt-2"
+                    style="font-size: 15px"
+                    >CodeWithHarry</a
+                  >
+                  <a
+                    href="#"
+                    class="text-decoration-none text-secondary"
+                    style="margin-top: -10px"
+                    >32K views 7 hours ago</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="content" style="width: 100%">
+              <img
+                src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+                width="100%"
+                height="230px"
+                class="rounded"
+              />
+              <div class="bottom_content py-2 d-flex">
+                <img
+                  src="/assets/profile.png"
+                  alt=""
+                  width="38px"
+                  height="38px"
+                />
+                <div class="d-flex flex-column w-75 px-2">
+                  <a href="#" class="title_ text-decoration-none text-light"
+                    >Python Tutorial For Beginners in Hindi | Complete Python
+                    Course</a
+                  >
+                  <a
+                    href="#"
+                    class="h4 text-decoration-none text-secondary mt-2"
+                    style="font-size: 15px"
+                    >CodeWithHarry</a
+                  >
+                  <a
+                    href="#"
+                    class="text-decoration-none text-secondary"
+                    style="margin-top: -10px"
+                    >32K views 7 hours ago</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
