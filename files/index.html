@@ -16,13 +16,13 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script
+    <!-- <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
       integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
+    ></script> -->
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -40,11 +40,20 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <script defer src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
+    />
+    <script defer src="/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body data-bs-theme="dark" style="background: #0f0f0f">
     <nav
-      class="navbar navbar-expand-lg position-sticky w-100 top-0"
+      class="navbar navbar-expand-lg position-sticky w-100 top-0 z-3"
       style="background: #0f0f0f; height: 60px"
     >
       <div class="container-fluid d-flex">
@@ -67,12 +76,11 @@
             <li class="nav-item">
               <a class="nav-link d-flex gap-1" href="#">
                 <img
-                  src="/assets/youtube.png"
+                  src="/assets/youtubeBrandLogo.png"
                   alt=""
-                  width="35px"
+                  width="100%"
                   height="35px"
                 />
-                <p class="fs-4 brandName_ text-light">YouTube</p>
               </a>
             </li>
           </ul>
@@ -129,432 +137,442 @@
 
     <div class="row">
       <div
-        class="col col-xxl-2 col-lg-1 col-md-1 d-none d-lg-inline-block position-sticky left-0 top-0"
+        class="position-relative col col-xxl-2 col-lg-1 col-md-1 d-none d-lg-inline-block"
       >
-        <!-- first row -->
-        <ul
-          class="nav flex-column align-items-lg-center align-items-xxl-start border-bottom pb-3"
-        >
-          <li class="nav-item">
-            <a
-              class="nav-link text-light d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
-              aria-current="page"
-              href="#"
-              ><img src="/assets/home.png" alt="" width="20px" height="20px" />
-              <span
-                class="smallFontSize_ ms-0 ms-xxl-4 d-none d-lg-inline-block"
-                >Home</span
-              ></a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
-              href="#"
-            >
-              <img
-                src="/assets/youtubeShorts.png"
-                alt=""
-                width="20px"
-                height="20px"
-              />
-              <span
-                class="smallFontSize_ ms-0 ms-xxl-4 d-none d-lg-inline-block"
-                >Shorts</span
-              >
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
-              href="#"
-              ><img
-                src="/assets/youtubeSubscriptions.png"
-                alt=""
-                width="20px"
-                height="20px"
-              />
-              <span
-                class="smallFontSize_ ms-0 ms-xxl-4 d-none d-lg-inline-block"
-                >Subscriptions</span
-              ></a
-            >
-          </li>
-          <li class="nav-item d-lg-inline-block d-xxl-none">
-            <a class="nav-link text-light" href="#"
-              ><img
-                src="/assets/yourChannel.png"
-                alt=""
-                class="d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
-                width="20px"
-                height="20px"
-              />
-              <span class="smallFontSize_ ms-4 ms-lg-0 d-none d-lg-inline-block"
-                >You</span
-              ></a
-            >
-          </li>
-        </ul>
-
-        <!-- second row -->
-        <div class="pt-3 border-bottom d-none d-xxl-inline-block">
-          <a href="" class="text-light text-decoration-none fs-5 ms-2"
-            >You <i class="bi bi-chevron-compact-right"></i
-          ></a>
-          <ul class="nav flex-column border-bottom pb-3">
+        <div class="position-sticky top-0 left-0 w-100">
+          <!-- first row -->
+          <ul
+            class="nav flex-column align-items-lg-center align-items-xxl-start border-bottom pb-3"
+          >
             <li class="nav-item">
-              <a class="nav-link text-light" aria-current="page" href="#"
+              <a
+                class="nav-link text-light d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
+                aria-current="page"
+                href="#"
+                ><img
+                  src="/assets/home.png"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <span
+                  class="smallFontSize_ ms-0 ms-xxl-4 d-none d-lg-inline-block"
+                  >Home</span
+                ></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
+                href="#"
+              >
+                <img
+                  src="/assets/youtubeShorts.png"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <span
+                  class="smallFontSize_ ms-0 ms-xxl-4 d-none d-lg-inline-block"
+                  >Shorts</span
+                >
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
+                href="#"
                 ><img
                   src="/assets/youtubeSubscriptions.png"
                   alt=""
                   width="20px"
                   height="20px"
                 />
-                <span class="ms-3 d-none d-lg-inline-block"
-                  >Your Channel</span
+                <span
+                  class="smallFontSize_ ms-0 ms-xxl-4 d-none d-lg-inline-block"
+                  >Subscriptions</span
                 ></a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#">
-                <img
-                  src="/assets/history.png"
-                  alt=""
-                  width="20px"
-                  height="20px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block">History</span>
-              </a>
-            </li>
-            <li class="nav-item">
+            <li class="nav-item d-lg-inline-block d-xxl-none">
               <a class="nav-link text-light" href="#"
                 ><img
-                  src="/assets/playlist.png"
+                  src="/assets/yourChannel.png"
                   alt=""
+                  class="d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
                   width="20px"
                   height="20px"
                 />
-                <span class="ms-3 d-none d-lg-inline-block">Playlists</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/yourVideos.png"
-                  alt=""
-                  width="20px"
-                  height="20px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block"
-                  >Your videos</span
-                ></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/watchLater.png"
-                  alt=""
-                  width="20px"
-                  height="20px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block"
-                  >Watch Later</span
-                ></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/likedVideos.png"
-                  alt=""
-                  width="20px"
-                  height="20px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block"
-                  >Liked videos</span
+                <span
+                  class="smallFontSize_ ms-4 ms-lg-0 d-none d-lg-inline-block"
+                  >You</span
                 ></a
               >
             </li>
           </ul>
-        </div>
-        <!-- third row -->
-        <div class="pt-3 border-bottom d-none d-xxl-inline-block">
-          <a href="" class="text-light text-decoration-none fs-5 ms-2"
-            >Subscriptions
-          </a>
-          <ul class="nav flex-column border-bottom pb-3">
-            <li class="nav-item">
-              <a class="nav-link text-light" aria-current="page" href="#"
-                ><img
-                  src="/assets/englishSpeeches.jpg"
-                  alt=""
-                  class="rounded-pill"
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3">English Speeches</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#">
-                <img
-                  src="/assets/quotes.jpg"
-                  alt=""
-                  class="rounded-pill"
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3">Quotes</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/osho.jpg"
-                  alt=""
-                  class="rounded-pill"
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3">Rajneesh Acharya</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/AadityaShrestha.png"
-                  alt=""
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3">Aaditya Shrestha</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/hitler.png"
-                  alt=""
-                  class="rounded-pill object-fit-cover"
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3">Adolf Hitler</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/nazi.png"
-                  alt=""
-                  class="object-fit-cover rounded-pill"
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3">Nazi vs Jews</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/Thomas_shelby.jpg"
-                  alt=""
-                  class="rounded-pill object-fit-cover"
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3">Thomas Shelby</span></a
-              >
-            </li>
-          </ul>
-        </div>
-        <!-- explore section -->
-        <div class="pt-3 border-bottom d-none d-xxl-inline-block">
-          <a href="" class="text-light text-decoration-none fs-5 ms-2"
-            >Explore
-          </a>
-          <ul class="nav flex-column border-bottom pb-3">
-            <li class="nav-item">
-              <a class="nav-link text-light" aria-current="page" href="#"
-                ><img
-                  src="/assets/trending.png"
-                  alt=""
-                  class="rounded-pill"
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block">Trending</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#">
-                <img
-                  src="/assets/music.png"
-                  alt=""
-                  class="rounded-pill"
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block">Music</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/game-controller.png"
-                  alt=""
-                  class="rounded-pill"
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block">Gaming</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/trophy.png"
-                  alt=""
-                  width="20px"
-                  height="20px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block">Sport</span></a
-              >
-            </li>
-          </ul>
-        </div>
-        <!-- more from youtube -->
-        <div class="pt-3 border-bottom d-none d-xxl-inline-block">
-          <a href="" class="text-light text-decoration-none fs-5 ms-2"
-            >More
-            <span class="d-none d-lg-inline-block">from YouTube </span>
-          </a>
-          <ul class="nav flex-column border-bottom pb-3">
-            <li class="nav-item">
-              <a class="nav-link text-light" aria-current="page" href="#"
-                ><img
-                  src="/assets/youtube.png"
-                  alt=""
-                  class="rounded-pill"
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block"
-                  >YouTube Premium</span
-                ></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#">
-                <img
-                  src="/assets/youtube.png"
-                  alt=""
-                  class="rounded-pill"
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block"
-                  >YouTube Studio</span
+
+          <!-- second row -->
+          <div class="pt-3 border-bottom d-none d-xxl-inline-block">
+            <a href="" class="text-light text-decoration-none fs-6 ms-2"
+              >You <i class="bi bi-chevron-compact-right"></i
+            ></a>
+            <ul class="nav flex-column border-bottom pb-3 mt-2">
+              <li class="nav-item">
+                <a class="nav-link text-light" aria-current="page" href="#"
+                  ><img
+                    src="/assets/youtubeSubscriptions.png"
+                    alt=""
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block"
+                    >Your Channel</span
+                  ></a
                 >
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/youtubeMusic.png"
-                  alt=""
-                  class="rounded-pill"
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block"
-                  >YouTube Music</span
-                ></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/youtube-kids.png"
-                  alt=""
-                  width="25px"
-                  height="25px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block"
-                  >YouTube Kids</span
-                ></a
-              >
-            </li>
-          </ul>
-        </div>
-        <!-- settings -->
-        <div class="pt-3 border-bottom d-none d-xxl-inline-block">
-          <a href="" class="text-light text-decoration-none fs-5 ms-2"
-            >Explore
-          </a>
-          <ul class="nav flex-column border-bottom pb-3">
-            <li class="nav-item">
-              <a class="nav-link text-light" aria-current="page" href="#"
-                ><img
-                  src="/assets/settings.png"
-                  alt=""
-                  class="rounded-pill"
-                  width="20px"
-                  height="20px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block">Settings</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#">
-                <img
-                  src="/assets/flags.png"
-                  alt=""
-                  class="rounded-pill"
-                  width="20px"
-                  height="20px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block"
-                  >Report history</span
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                  <img
+                    src="/assets/history.png"
+                    alt=""
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block">History</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/playlist.png"
+                    alt=""
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block"
+                    >Playlists</span
+                  ></a
                 >
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/question.png"
-                  alt=""
-                  class="rounded-pill"
-                  width="20px"
-                  height="20px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block">Help</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#"
-                ><img
-                  src="/assets/feedback.png"
-                  alt=""
-                  width="20px"
-                  height="20px"
-                />
-                <span class="ms-3 d-none d-lg-inline-block"
-                  >Send feedback</span
-                ></a
-              >
-            </li>
-          </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/yourVideos.png"
+                    alt=""
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block"
+                    >Your videos</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/watchLater.png"
+                    alt=""
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block"
+                    >Watch Later</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/likedVideos.png"
+                    alt=""
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block"
+                    >Liked videos</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- third row -->
+          <div class="pt-3 border-bottom d-none d-xxl-inline-block">
+            <a href="" class="text-light text-decoration-none fs-5 ms-2"
+              >Subscriptions
+            </a>
+            <ul class="nav flex-column border-bottom pb-3">
+              <li class="nav-item">
+                <a class="nav-link text-light" aria-current="page" href="#"
+                  ><img
+                    src="/assets/englishSpeeches.jpg"
+                    alt=""
+                    class="rounded-pill"
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3">English Speeches</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                  <img
+                    src="/assets/quotes.jpg"
+                    alt=""
+                    class="rounded-pill"
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3">Quotes</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/osho.jpg"
+                    alt=""
+                    class="rounded-pill"
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3">Rajneesh Acharya</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/AadityaShrestha.png"
+                    alt=""
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3">Aaditya Shrestha</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/hitler.png"
+                    alt=""
+                    class="rounded-pill object-fit-cover"
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3">Adolf Hitler</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/nazi.png"
+                    alt=""
+                    class="object-fit-cover rounded-pill"
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3">Nazi vs Jews</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/Thomas_shelby.jpg"
+                    alt=""
+                    class="rounded-pill object-fit-cover"
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3">Thomas Shelby</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- explore section -->
+          <div class="pt-3 border-bottom d-none d-xxl-inline-block">
+            <a href="" class="text-light text-decoration-none fs-5 ms-2"
+              >Explore
+            </a>
+            <ul class="nav flex-column border-bottom pb-3">
+              <li class="nav-item">
+                <a class="nav-link text-light" aria-current="page" href="#"
+                  ><img
+                    src="/assets/trending.png"
+                    alt=""
+                    class="rounded-pill"
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block">Trending</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                  <img
+                    src="/assets/music.png"
+                    alt=""
+                    class="rounded-pill"
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block">Music</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/game-controller.png"
+                    alt=""
+                    class="rounded-pill"
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block">Gaming</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/trophy.png"
+                    alt=""
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block">Sport</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- more from youtube -->
+          <div class="pt-3 border-bottom d-none d-xxl-inline-block">
+            <a href="" class="text-light text-decoration-none fs-5 ms-2"
+              >More
+              <span class="d-none d-lg-inline-block">from YouTube </span>
+            </a>
+            <ul class="nav flex-column border-bottom pb-3">
+              <li class="nav-item">
+                <a class="nav-link text-light" aria-current="page" href="#"
+                  ><img
+                    src="/assets/youtube.png"
+                    alt=""
+                    class="rounded-pill"
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block"
+                    >YouTube Premium</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                  <img
+                    src="/assets/youtube.png"
+                    alt=""
+                    class="rounded-pill"
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block"
+                    >YouTube Studio</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/youtubeMusic.png"
+                    alt=""
+                    class="rounded-pill"
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block"
+                    >YouTube Music</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/youtube-kids.png"
+                    alt=""
+                    width="25px"
+                    height="25px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block"
+                    >YouTube Kids</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- settings -->
+          <div class="pt-3 border-bottom d-none d-xxl-inline-block">
+            <a href="" class="text-light text-decoration-none fs-5 ms-2"
+              >Explore
+            </a>
+            <ul class="nav flex-column border-bottom pb-3">
+              <li class="nav-item">
+                <a class="nav-link text-light" aria-current="page" href="#"
+                  ><img
+                    src="/assets/settings.png"
+                    alt=""
+                    class="rounded-pill"
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block">Settings</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                  <img
+                    src="/assets/flags.png"
+                    alt=""
+                    class="rounded-pill"
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block"
+                    >Report history</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/question.png"
+                    alt=""
+                    class="rounded-pill"
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block">Help</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/feedback.png"
+                    alt=""
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3 d-none d-lg-inline-block"
+                    >Send feedback</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div
         class="col col-xxl-10 col-lg-11 mt-2 d-flex flex-column align-items-center"
       >
-        <ul class="nav nav-pills d-flex gap-2 ms-3 owl-carousel">
+        <ul class="nav nav-pills owl-carousel">
           <li class="nav-item">
             <a
-              class="nav-link text-light"
+              class="nav-link text-light py-1"
               style="background: #272727"
               aria-current="page"
               href="#"
@@ -563,7 +581,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link text-light"
+              class="nav-link text-light py-1"
               style="background: #272727"
               aria-current="page"
               href="#"
@@ -572,7 +590,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link text-light"
+              class="nav-link text-light py-1"
               aria-current="page"
               style="background: #272727"
               href="#"
@@ -581,16 +599,16 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link text-light"
+              class="nav-link text-light py-1"
               aria-current="page"
               style="background: #272727"
               href="#"
               >Words</a
             >
           </li>
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a
-              class="nav-link text-light"
+              class="nav-link text-light py-1"
               aria-current="page"
               style="background: #272727"
               href="#"
@@ -599,7 +617,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link text-light"
+              class="nav-link text-light py-1"
               aria-current="page"
               style="background: #272727"
               href="#"
@@ -608,7 +626,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link text-light"
+              class="nav-link text-light py-1"
               aria-current="page"
               style="background: #272727"
               href="#"
@@ -617,7 +635,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link text-light"
+              class="nav-link text-light py-1"
               aria-current="page"
               style="background: #272727"
               href="#"
@@ -626,7 +644,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link text-light"
+              class="nav-link text-light py-1"
               aria-current="page"
               style="background: #272727"
               href="#"
@@ -635,15 +653,69 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link text-light"
+              class="nav-link text-light py-1"
               aria-current="page"
               style="background: #272727"
               href="#"
               >Recently Uploaded</a
             >
-          </li> -->
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light py-1"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Machine Learning</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light py-1"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Data Type</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light py-1"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Shah Rukh Khan</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light py-1"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Thrillers</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light py-1"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Software Engineering</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light py-1"
+              aria-current="page"
+              style="background: #272727"
+              href="#"
+              >Tesla</a
+            >
+          </li>
         </ul>
-        <div class="row py-4 ms-2">
+        <div class="row py-2 row-gap-4">
           <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
             <div class="content" style="width: 100%">
               <img
