@@ -17,15 +17,29 @@
       crossorigin="anonymous"
     ></script>
     <script
+      defer
       src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
       integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
     <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
       src="https://kit.fontawesome.com/2c92abfc3e.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body data-bs-theme="dark" style="background: #0f0f0f">
@@ -114,45 +128,78 @@
     </nav>
 
     <div class="row">
-      <div class="col col-2 position-sticky left-0 top-0">
+      <div
+        class="col col-xxl-2 col-lg-1 col-md-1 d-none d-lg-inline-block position-sticky left-0 top-0"
+      >
         <!-- first row -->
-        <ul class="nav flex-column border-bottom pb-3">
+        <ul
+          class="nav flex-column align-items-lg-center align-items-xxl-start border-bottom pb-3"
+        >
           <li class="nav-item">
-            <a class="nav-link text-light" aria-current="page" href="#"
+            <a
+              class="nav-link text-light d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
+              aria-current="page"
+              href="#"
               ><img src="/assets/home.png" alt="" width="20px" height="20px" />
-              <span class="ms-4 d-none d-lg-inline-block">Home</span></a
+              <span
+                class="smallFontSize_ ms-0 ms-xxl-4 d-none d-lg-inline-block"
+                >Home</span
+              ></a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">
+            <a
+              class="nav-link text-light d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
+              href="#"
+            >
               <img
                 src="/assets/youtubeShorts.png"
                 alt=""
                 width="20px"
                 height="20px"
               />
-              <span class="ms-4 d-none d-lg-inline-block">Shorts</span>
+              <span
+                class="smallFontSize_ ms-0 ms-xxl-4 d-none d-lg-inline-block"
+                >Shorts</span
+              >
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#"
+            <a
+              class="nav-link text-light d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
+              href="#"
               ><img
                 src="/assets/youtubeSubscriptions.png"
                 alt=""
                 width="20px"
                 height="20px"
               />
-              <span class="ms-4 d-none d-lg-inline-block"
+              <span
+                class="smallFontSize_ ms-0 ms-xxl-4 d-none d-lg-inline-block"
                 >Subscriptions</span
+              ></a
+            >
+          </li>
+          <li class="nav-item d-lg-inline-block d-xxl-none">
+            <a class="nav-link text-light" href="#"
+              ><img
+                src="/assets/yourChannel.png"
+                alt=""
+                class="d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
+                width="20px"
+                height="20px"
+              />
+              <span class="smallFontSize_ ms-4 ms-lg-0 d-none d-lg-inline-block"
+                >You</span
               ></a
             >
           </li>
         </ul>
 
         <!-- second row -->
-        <div class="pt-3 border-bottom">
+        <div class="pt-3 border-bottom d-none d-xxl-inline-block">
           <a href="" class="text-light text-decoration-none fs-5 ms-2"
-            >You <span><i class="fa-solid fa-chevron-right fs-6 ms-2"></i></span
+            >You <i class="bi bi-chevron-compact-right"></i
           ></a>
           <ul class="nav flex-column border-bottom pb-3">
             <li class="nav-item">
@@ -232,7 +279,7 @@
           </ul>
         </div>
         <!-- third row -->
-        <div class="pt-3 border-bottom d-none d-lg-inline-block">
+        <div class="pt-3 border-bottom d-none d-xxl-inline-block">
           <a href="" class="text-light text-decoration-none fs-5 ms-2"
             >Subscriptions
           </a>
@@ -323,7 +370,7 @@
           </ul>
         </div>
         <!-- explore section -->
-        <div class="pt-3 border-bottom">
+        <div class="pt-3 border-bottom d-none d-xxl-inline-block">
           <a href="" class="text-light text-decoration-none fs-5 ms-2"
             >Explore
           </a>
@@ -378,7 +425,7 @@
           </ul>
         </div>
         <!-- more from youtube -->
-        <div class="pt-3 border-bottom">
+        <div class="pt-3 border-bottom d-none d-xxl-inline-block">
           <a href="" class="text-light text-decoration-none fs-5 ms-2"
             >More
             <span class="d-none d-lg-inline-block">from YouTube </span>
@@ -442,7 +489,7 @@
           </ul>
         </div>
         <!-- settings -->
-        <div class="pt-3 border-bottom">
+        <div class="pt-3 border-bottom d-none d-xxl-inline-block">
           <a href="" class="text-light text-decoration-none fs-5 ms-2"
             >Explore
           </a>
@@ -501,12 +548,14 @@
           </ul>
         </div>
       </div>
-      <div class="col-xl-10 col-lg-10 col-md-10 mt-2">
-        <ul class="nav nav-pills d-flex gap-2 ms-3">
+      <div
+        class="col col-xxl-10 col-lg-11 mt-2 d-flex flex-column align-items-center"
+      >
+        <ul class="nav nav-pills d-flex gap-2 ms-3 owl-carousel">
           <li class="nav-item">
             <a
               class="nav-link text-light"
-              style="background: #272727; height: 30px"
+              style="background: #272727"
               aria-current="page"
               href="#"
               >All</a
@@ -539,7 +588,7 @@
               >Words</a
             >
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a
               class="nav-link text-light"
               aria-current="page"
@@ -592,7 +641,7 @@
               href="#"
               >Recently Uploaded</a
             >
-          </li>
+          </li> -->
         </ul>
         <div class="row py-4 ms-2">
           <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
