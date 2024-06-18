@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
-    items: 7,
+    items: 6,
     margin: 10,
     autoWidth: true,
     dragEndSpeed: true,
@@ -16,3 +16,9 @@ owl.on("mousewheel", ".owl-stage", function (e) {
   }
   e.preventDefault();
 });
+
+const menuButton = document.querySelector("#menuButton")
+
+menuButton.addEventListener('click', ()=>{
+  
+})

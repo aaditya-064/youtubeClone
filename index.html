@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -49,6 +50,12 @@
       href="/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
     />
     <script defer src="/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body
@@ -61,7 +68,7 @@
       style="background: #0f0f0f; height: 60px"
     >
       <div class="container-fluid d-flex">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" id="menuButton" href="#"
           ><img src="/assets/menuButton.png" alt="" width="20px" height="20px"
         /></a>
         <!-- <button
@@ -75,7 +82,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button> -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link d-flex gap-1" href="#">
@@ -91,7 +98,12 @@
           <form class="d-flex mx-auto w-50" role="search">
             <input
               class="searchBox_ form-control me-2 w-75 outline-0"
-              style="background: #0f0f0f; border-color: #303030; height: 40px"
+              style="
+                background: #0f0f0f;
+                border-color: #303030;
+                height: 40px;
+                border-radius: 30px;
+              "
               type="search"
               placeholder="Search"
               aria-label="Search"
@@ -140,10 +152,11 @@
     </nav>
 
     <div class="row">
-      <div
-        class="position-relative col col-xxl-2 col-lg-1 col-md-1 d-none d-lg-inline-block"
-      >
-        <div class="position-sticky top-0 left-0 w-100">
+      <div class="col col-xxl-2 col-lg-1 col-md-1">
+        <div
+          style="height: 100vh; overflow-y: scroll"
+          class="position-fixed d-flex flex-column right-0"
+        >
           <!-- first row -->
           <ul
             class="nav flex-column align-items-lg-center align-items-xxl-start border-bottom pb-3"
@@ -159,10 +172,7 @@
                   width="20px"
                   height="20px"
                 />
-                <span
-                  class="smallFontSize_ ms-0 ms-xxl-4 d-none d-lg-inline-block"
-                  >Home</span
-                ></a
+                <span class="smallFontSize_ ms-0 ms-xxl-4">Home</span></a
               >
             </li>
             <li class="nav-item">
@@ -176,10 +186,7 @@
                   width="20px"
                   height="20px"
                 />
-                <span
-                  class="smallFontSize_ ms-0 ms-xxl-4 d-none d-lg-inline-block"
-                  >Shorts</span
-                >
+                <span class="smallFontSize_ ms-0 ms-xxl-4">Shorts</span>
               </a>
             </li>
             <li class="nav-item">
@@ -192,8 +199,7 @@
                   width="20px"
                   height="20px"
                 />
-                <span
-                  class="smallFontSize_ ms-0 ms-xxl-4 d-none d-lg-inline-block"
+                <span class="smallFontSize_ ms-0 ms-xxl-4"
                   >Subscriptions</span
                 ></a
               >
@@ -207,16 +213,13 @@
                   width="20px"
                   height="20px"
                 />
-                <span
-                  class="smallFontSize_ ms-4 ms-lg-0 d-none d-lg-inline-block"
-                  >You</span
-                ></a
+                <span class="smallFontSize_ ms-4 ms-lg-0">You</span></a
               >
             </li>
           </ul>
 
           <!-- second row -->
-          <div class="pt-3 border-bottom d-none d-xxl-inline-block">
+          <div class="pt-3 border-bottom d-xxl-inline-block">
             <a href="" class="text-light text-decoration-none fs-6 ms-2"
               >You <i class="bi bi-chevron-compact-right"></i
             ></a>
@@ -229,9 +232,7 @@
                     width="20px"
                     height="20px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block"
-                    >Your Channel</span
-                  ></a
+                  <span class="ms-3">Your Channel</span></a
                 >
               </li>
               <li class="nav-item">
@@ -242,7 +243,7 @@
                     width="20px"
                     height="20px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block">History</span>
+                  <span class="ms-3">History</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -253,9 +254,7 @@
                     width="20px"
                     height="20px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block"
-                    >Playlists</span
-                  ></a
+                  <span class="ms-3">Playlists</span></a
                 >
               </li>
               <li class="nav-item">
@@ -266,9 +265,7 @@
                     width="20px"
                     height="20px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block"
-                    >Your videos</span
-                  ></a
+                  <span class="ms-3">Your videos</span></a
                 >
               </li>
               <li class="nav-item">
@@ -279,9 +276,7 @@
                     width="20px"
                     height="20px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block"
-                    >Watch Later</span
-                  ></a
+                  <span class="ms-3">Watch Later</span></a
                 >
               </li>
               <li class="nav-item">
@@ -292,15 +287,13 @@
                     width="20px"
                     height="20px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block"
-                    >Liked videos</span
-                  ></a
+                  <span class="ms-3">Liked videos</span></a
                 >
               </li>
             </ul>
           </div>
           <!-- third row -->
-          <div class="pt-3 border-bottom d-none d-xxl-inline-block">
+          <div class="pt-3 border-bottom d-xxl-inline-block">
             <a href="" class="text-light text-decoration-none fs-5 ms-2"
               >Subscriptions
             </a>
@@ -391,7 +384,7 @@
             </ul>
           </div>
           <!-- explore section -->
-          <div class="pt-3 border-bottom d-none d-xxl-inline-block">
+          <div class="pt-3 border-bottom d-xxl-inline-block">
             <a href="" class="text-light text-decoration-none fs-5 ms-2"
               >Explore
             </a>
@@ -405,7 +398,7 @@
                     width="25px"
                     height="25px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block">Trending</span></a
+                  <span class="ms-3">Trending</span></a
                 >
               </li>
               <li class="nav-item">
@@ -417,7 +410,7 @@
                     width="25px"
                     height="25px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block">Music</span>
+                  <span class="ms-3">Music</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -429,7 +422,7 @@
                     width="25px"
                     height="25px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block">Gaming</span></a
+                  <span class="ms-3">Gaming</span></a
                 >
               </li>
               <li class="nav-item">
@@ -440,16 +433,16 @@
                     width="20px"
                     height="20px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block">Sport</span></a
+                  <span class="ms-3">Sport</span></a
                 >
               </li>
             </ul>
           </div>
           <!-- more from youtube -->
-          <div class="pt-3 border-bottom d-none d-xxl-inline-block">
+          <div class="pt-3 border-bottom d-xxl-inline-block">
             <a href="" class="text-light text-decoration-none fs-5 ms-2"
               >More
-              <span class="d-none d-lg-inline-block">from YouTube </span>
+              <span class="">from YouTube </span>
             </a>
             <ul class="nav flex-column border-bottom pb-3">
               <li class="nav-item">
@@ -461,9 +454,7 @@
                     width="25px"
                     height="25px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block"
-                    >YouTube Premium</span
-                  ></a
+                  <span class="ms-3">YouTube Premium</span></a
                 >
               </li>
               <li class="nav-item">
@@ -475,9 +466,7 @@
                     width="25px"
                     height="25px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block"
-                    >YouTube Studio</span
-                  >
+                  <span class="ms-3">YouTube Studio</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -489,9 +478,7 @@
                     width="25px"
                     height="25px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block"
-                    >YouTube Music</span
-                  ></a
+                  <span class="ms-3">YouTube Music</span></a
                 >
               </li>
               <li class="nav-item">
@@ -502,15 +489,13 @@
                     width="25px"
                     height="25px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block"
-                    >YouTube Kids</span
-                  ></a
+                  <span class="ms-3">YouTube Kids</span></a
                 >
               </li>
             </ul>
           </div>
           <!-- settings -->
-          <div class="pt-3 border-bottom d-none d-xxl-inline-block">
+          <div class="pt-3 border-bottom d-xxl-inline-block">
             <a href="" class="text-light text-decoration-none fs-5 ms-2"
               >Explore
             </a>
@@ -524,7 +509,7 @@
                     width="20px"
                     height="20px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block">Settings</span></a
+                  <span class="ms-3">Settings</span></a
                 >
               </li>
               <li class="nav-item">
@@ -536,9 +521,7 @@
                     width="20px"
                     height="20px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block"
-                    >Report history</span
-                  >
+                  <span class="ms-3">Report history</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -550,7 +533,7 @@
                     width="20px"
                     height="20px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block">Help</span></a
+                  <span class="ms-3">Help</span></a
                 >
               </li>
               <li class="nav-item">
@@ -561,9 +544,7 @@
                     width="20px"
                     height="20px"
                   />
-                  <span class="ms-3 d-none d-lg-inline-block"
-                    >Send feedback</span
-                  ></a
+                  <span class="ms-3">Send feedback</span></a
                 >
               </li>
             </ul>
@@ -573,152 +554,157 @@
       <div
         class="col col-xxl-10 col-lg-11 mt-2 d-flex flex-column align-items-center"
       >
-        <ul class="nav nav-pills owl-carousel">
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              style="background: #272727"
-              aria-current="page"
-              href="#"
-              >All</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              style="background: #272727"
-              aria-current="page"
-              href="#"
-              >Thoughts</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Intelligence</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Words</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Computer Programming</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Seminars</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Information</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Public speaking event</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Podcasts</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Recently Uploaded</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Machine Learning</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Data Type</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Shah Rukh Khan</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Thrillers</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Software Engineering</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light py-1"
-              aria-current="page"
-              style="background: #272727"
-              href="#"
-              >Tesla</a
-            >
-          </li>
-        </ul>
+        <div
+          class="d-flex align-items-center position-sticky w-100"
+          style="top: 8%; background: #0f0f0f"
+        >
+          <ul class="nav nav-pills owl-carousel" style="top: 20%">
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                style="background: #272727"
+                aria-current="page"
+                href="#"
+                >All</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                style="background: #272727"
+                aria-current="page"
+                href="#"
+                >Thoughts</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Intelligence</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Words</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Computer Programming</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Seminars</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Information</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Public speaking event</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Podcasts</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Recently Uploaded</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Machine Learning</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Data Type</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Shah Rukh Khan</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Thrillers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Software Engineering</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light py-1"
+                aria-current="page"
+                style="background: #272727"
+                href="#"
+                >Tesla</a
+              >
+            </li>
+          </ul>
+        </div>
         <div class="row py-2 row-gap-4">
           <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
             <a
@@ -959,6 +945,498 @@
                       class="text-decoration-none text-secondary"
                       style="margin-top: -10px"
                       >1.1M views 2 years ago</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <a
+              href="https://www.youtube.com/watch?v=-NykWa58-Iw&pp=ygUedGV0aWthaSBjaG9kYW5hIGtlc2hhIGxhaSBzb25n"
+            >
+              <div class="content" style="width: 100%">
+                <img
+                  src="/assets/thumbnails/sadhana.jpg"
+                  alt=""
+                  width="100%"
+                  height="230px"
+                  class="rounded object-fit-cover"
+                />
+                <div class="bottom_content py-2 d-flex">
+                  <img
+                    src="/assets/profile.png"
+                    alt=""
+                    width="38px"
+                    height="38px"
+                  />
+                  <div class="d-flex flex-column w-100 px-2">
+                    <a href="#" class="title_ text-decoration-none text-light"
+                      >Tetikai Chodana Kesalai | Sadhana - John Chamling
+                      (Lyrics)</a
+                    >
+                    <a
+                      href="#"
+                      class="h4 text-decoration-none text-secondary mt-2"
+                      style="font-size: 15px"
+                      >Mr Lyrics</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-secondary"
+                      style="margin-top: -10px"
+                      >2.1M views 1 year ago</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <a
+              href="https://www.youtube.com/watch?v=AX6OrbgS8lI&pp=ygUMdHUgaGFpIGthaGFu"
+            >
+              <div class="content" style="width: 100%">
+                <img
+                  src="/assets/thumbnails/tu hai kahan.jpg"
+                  alt=""
+                  width="100%"
+                  height="230px"
+                  class="rounded object-fit-cover"
+                />
+                <div class="bottom_content py-2 d-flex">
+                  <img
+                    src="/assets/profile.png"
+                    alt=""
+                    width="38px"
+                    height="38px"
+                  />
+                  <div class="d-flex flex-column w-75 px-2">
+                    <a href="#" class="title_ text-decoration-none text-light"
+                      >AUR - TU HAI KAHAN - Raffey - Usama - Ahad (Official
+                      Music Video)</a
+                    >
+                    <a
+                      href="#"
+                      class="h4 text-decoration-none text-secondary mt-2"
+                      style="font-size: 15px"
+                      >AUR</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-secondary"
+                      style="margin-top: -10px"
+                      >181M views 1 year ago</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <a
+              href="https://www.youtube.com/watch?v=Zf87y5bWzUA&pp=ygUnSXQgV2lsbCBHaXZlIFlvdSBHb29zZWJ1bXBzIHwgRWxvbiBNdXNr"
+            >
+              <div class="content" style="width: 100%">
+                <img
+                  src="/assets/thumbnails/elon musk.jpg"
+                  alt=""
+                  width="100%"
+                  height="230px"
+                  class="rounded object-fit-cover"
+                />
+                <div class="bottom_content py-2 d-flex">
+                  <img
+                    src="/assets/profile.png"
+                    alt=""
+                    width="38px"
+                    height="38px"
+                  />
+                  <div class="d-flex flex-column w-75 px-2">
+                    <a href="#" class="title_ text-decoration-none text-light"
+                      >It Will Give You Goosebumps | Elon Musk (Motivational
+                      Video)</a
+                    >
+                    <a
+                      href="#"
+                      class="h4 text-decoration-none text-secondary mt-2"
+                      style="font-size: 15px"
+                      >Motivation Madness</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-secondary"
+                      style="margin-top: -10px"
+                      >2.4M views 1 year ago</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <a
+              href="https://www.youtube.com/watch?v=-NykWa58-Iw&pp=ygUedGV0aWthaSBjaG9kYW5hIGtlc2hhIGxhaSBzb25n"
+            >
+              <div class="content" style="width: 100%">
+                <img
+                  src="/assets/thumbnails/sadhana.jpg"
+                  alt=""
+                  width="100%"
+                  height="230px"
+                  class="rounded object-fit-cover"
+                />
+                <div class="bottom_content py-2 d-flex">
+                  <img
+                    src="/assets/profile.png"
+                    alt=""
+                    width="38px"
+                    height="38px"
+                  />
+                  <div class="d-flex flex-column w-100 px-2">
+                    <a href="#" class="title_ text-decoration-none text-light"
+                      >Tetikai Chodana Kesalai | Sadhana - John Chamling
+                      (Lyrics)</a
+                    >
+                    <a
+                      href="#"
+                      class="h4 text-decoration-none text-secondary mt-2"
+                      style="font-size: 15px"
+                      >Mr Lyrics</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-secondary"
+                      style="margin-top: -10px"
+                      >2.1M views 1 year ago</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <a
+              href="https://www.youtube.com/watch?v=AX6OrbgS8lI&pp=ygUMdHUgaGFpIGthaGFu"
+            >
+              <div class="content" style="width: 100%">
+                <img
+                  src="/assets/thumbnails/tu hai kahan.jpg"
+                  alt=""
+                  width="100%"
+                  height="230px"
+                  class="rounded object-fit-cover"
+                />
+                <div class="bottom_content py-2 d-flex">
+                  <img
+                    src="/assets/profile.png"
+                    alt=""
+                    width="38px"
+                    height="38px"
+                  />
+                  <div class="d-flex flex-column w-75 px-2">
+                    <a href="#" class="title_ text-decoration-none text-light"
+                      >AUR - TU HAI KAHAN - Raffey - Usama - Ahad (Official
+                      Music Video)</a
+                    >
+                    <a
+                      href="#"
+                      class="h4 text-decoration-none text-secondary mt-2"
+                      style="font-size: 15px"
+                      >AUR</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-secondary"
+                      style="margin-top: -10px"
+                      >181M views 1 year ago</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <a
+              href="https://www.youtube.com/watch?v=Zf87y5bWzUA&pp=ygUnSXQgV2lsbCBHaXZlIFlvdSBHb29zZWJ1bXBzIHwgRWxvbiBNdXNr"
+            >
+              <div class="content" style="width: 100%">
+                <img
+                  src="/assets/thumbnails/elon musk.jpg"
+                  alt=""
+                  width="100%"
+                  height="230px"
+                  class="rounded object-fit-cover"
+                />
+                <div class="bottom_content py-2 d-flex">
+                  <img
+                    src="/assets/profile.png"
+                    alt=""
+                    width="38px"
+                    height="38px"
+                  />
+                  <div class="d-flex flex-column w-75 px-2">
+                    <a href="#" class="title_ text-decoration-none text-light"
+                      >It Will Give You Goosebumps | Elon Musk (Motivational
+                      Video)</a
+                    >
+                    <a
+                      href="#"
+                      class="h4 text-decoration-none text-secondary mt-2"
+                      style="font-size: 15px"
+                      >Motivation Madness</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-secondary"
+                      style="margin-top: -10px"
+                      >2.4M views 1 year ago</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <a
+              href="https://www.youtube.com/watch?v=-NykWa58-Iw&pp=ygUedGV0aWthaSBjaG9kYW5hIGtlc2hhIGxhaSBzb25n"
+            >
+              <div class="content" style="width: 100%">
+                <img
+                  src="/assets/thumbnails/sadhana.jpg"
+                  alt=""
+                  width="100%"
+                  height="230px"
+                  class="rounded object-fit-cover"
+                />
+                <div class="bottom_content py-2 d-flex">
+                  <img
+                    src="/assets/profile.png"
+                    alt=""
+                    width="38px"
+                    height="38px"
+                  />
+                  <div class="d-flex flex-column w-100 px-2">
+                    <a href="#" class="title_ text-decoration-none text-light"
+                      >Tetikai Chodana Kesalai | Sadhana - John Chamling
+                      (Lyrics)</a
+                    >
+                    <a
+                      href="#"
+                      class="h4 text-decoration-none text-secondary mt-2"
+                      style="font-size: 15px"
+                      >Mr Lyrics</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-secondary"
+                      style="margin-top: -10px"
+                      >2.1M views 1 year ago</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <a
+              href="https://www.youtube.com/watch?v=AX6OrbgS8lI&pp=ygUMdHUgaGFpIGthaGFu"
+            >
+              <div class="content" style="width: 100%">
+                <img
+                  src="/assets/thumbnails/tu hai kahan.jpg"
+                  alt=""
+                  width="100%"
+                  height="230px"
+                  class="rounded object-fit-cover"
+                />
+                <div class="bottom_content py-2 d-flex">
+                  <img
+                    src="/assets/profile.png"
+                    alt=""
+                    width="38px"
+                    height="38px"
+                  />
+                  <div class="d-flex flex-column w-75 px-2">
+                    <a href="#" class="title_ text-decoration-none text-light"
+                      >AUR - TU HAI KAHAN - Raffey - Usama - Ahad (Official
+                      Music Video)</a
+                    >
+                    <a
+                      href="#"
+                      class="h4 text-decoration-none text-secondary mt-2"
+                      style="font-size: 15px"
+                      >AUR</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-secondary"
+                      style="margin-top: -10px"
+                      >181M views 1 year ago</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <a
+              href="https://www.youtube.com/watch?v=Zf87y5bWzUA&pp=ygUnSXQgV2lsbCBHaXZlIFlvdSBHb29zZWJ1bXBzIHwgRWxvbiBNdXNr"
+            >
+              <div class="content" style="width: 100%">
+                <img
+                  src="/assets/thumbnails/elon musk.jpg"
+                  alt=""
+                  width="100%"
+                  height="230px"
+                  class="rounded object-fit-cover"
+                />
+                <div class="bottom_content py-2 d-flex">
+                  <img
+                    src="/assets/profile.png"
+                    alt=""
+                    width="38px"
+                    height="38px"
+                  />
+                  <div class="d-flex flex-column w-75 px-2">
+                    <a href="#" class="title_ text-decoration-none text-light"
+                      >It Will Give You Goosebumps | Elon Musk (Motivational
+                      Video)</a
+                    >
+                    <a
+                      href="#"
+                      class="h4 text-decoration-none text-secondary mt-2"
+                      style="font-size: 15px"
+                      >Motivation Madness</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-secondary"
+                      style="margin-top: -10px"
+                      >2.4M views 1 year ago</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <a
+              href="https://www.youtube.com/watch?v=-NykWa58-Iw&pp=ygUedGV0aWthaSBjaG9kYW5hIGtlc2hhIGxhaSBzb25n"
+            >
+              <div class="content" style="width: 100%">
+                <img
+                  src="/assets/thumbnails/sadhana.jpg"
+                  alt=""
+                  width="100%"
+                  height="230px"
+                  class="rounded object-fit-cover"
+                />
+                <div class="bottom_content py-2 d-flex">
+                  <img
+                    src="/assets/profile.png"
+                    alt=""
+                    width="38px"
+                    height="38px"
+                  />
+                  <div class="d-flex flex-column w-100 px-2">
+                    <a href="#" class="title_ text-decoration-none text-light"
+                      >Tetikai Chodana Kesalai | Sadhana - John Chamling
+                      (Lyrics)</a
+                    >
+                    <a
+                      href="#"
+                      class="h4 text-decoration-none text-secondary mt-2"
+                      style="font-size: 15px"
+                      >Mr Lyrics</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-secondary"
+                      style="margin-top: -10px"
+                      >2.1M views 1 year ago</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <a
+              href="https://www.youtube.com/watch?v=AX6OrbgS8lI&pp=ygUMdHUgaGFpIGthaGFu"
+            >
+              <div class="content" style="width: 100%">
+                <img
+                  src="/assets/thumbnails/tu hai kahan.jpg"
+                  alt=""
+                  width="100%"
+                  height="230px"
+                  class="rounded object-fit-cover"
+                />
+                <div class="bottom_content py-2 d-flex">
+                  <img
+                    src="/assets/profile.png"
+                    alt=""
+                    width="38px"
+                    height="38px"
+                  />
+                  <div class="d-flex flex-column w-75 px-2">
+                    <a href="#" class="title_ text-decoration-none text-light"
+                      >AUR - TU HAI KAHAN - Raffey - Usama - Ahad (Official
+                      Music Video)</a
+                    >
+                    <a
+                      href="#"
+                      class="h4 text-decoration-none text-secondary mt-2"
+                      style="font-size: 15px"
+                      >AUR</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-secondary"
+                      style="margin-top: -10px"
+                      >181M views 1 year ago</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+            <a
+              href="https://www.youtube.com/watch?v=Zf87y5bWzUA&pp=ygUnSXQgV2lsbCBHaXZlIFlvdSBHb29zZWJ1bXBzIHwgRWxvbiBNdXNr"
+            >
+              <div class="content" style="width: 100%">
+                <img
+                  src="/assets/thumbnails/elon musk.jpg"
+                  alt=""
+                  width="100%"
+                  height="230px"
+                  class="rounded object-fit-cover"
+                />
+                <div class="bottom_content py-2 d-flex">
+                  <img
+                    src="/assets/profile.png"
+                    alt=""
+                    width="38px"
+                    height="38px"
+                  />
+                  <div class="d-flex flex-column w-75 px-2">
+                    <a href="#" class="title_ text-decoration-none text-light"
+                      >It Will Give You Goosebumps | Elon Musk (Motivational
+                      Video)</a
+                    >
+                    <a
+                      href="#"
+                      class="h4 text-decoration-none text-secondary mt-2"
+                      style="font-size: 15px"
+                      >Motivation Madness</a
+                    >
+                    <a
+                      href="#"
+                      class="text-decoration-none text-secondary"
+                      style="margin-top: -10px"
+                      >2.4M views 1 year ago</a
                     >
                   </div>
                 </div>
