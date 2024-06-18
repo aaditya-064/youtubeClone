@@ -16,9 +16,3 @@ owl.on("mousewheel", ".owl-stage", function (e) {
   }
   e.preventDefault();
 });
-
-const menuButton = document.querySelector("#menuButton")
-
-menuButton.addEventListener('click', ()=>{
-  
-})

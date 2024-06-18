@@ -24,6 +24,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script> -->
+    <script defer src="app.js"></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -152,18 +153,19 @@
     </nav>
 
     <div class="row">
-      <div class="col col-xxl-2 col-lg-1 col-md-1">
+      <div class="col col-xxl-2 col-1 col-xs-1">
         <div
-          style="height: 100vh; overflow-y: scroll"
-          class="position-fixed d-flex flex-column right-0"
+          style="height: 100vh; overflow-y: scroll;"
+          class="wholeSideNav_ removeSideNav d-flex flex-column end-0"
         >
           <!-- first row -->
+           <div class="topNavItems position-sticky d-xs-none">
           <ul
-            class="nav flex-column align-items-lg-center align-items-xxl-start border-bottom pb-3"
+            class="nav flex-column align-items-lg-center align-items-xxl-start border-bottom pb-3 "
           >
             <li class="nav-item">
               <a
-                class="nav-link text-light d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
+                class="nav-link text-light d-flex flex-column flex-xxl-row align-items-lg-center align-items-xxl-start"
                 aria-current="page"
                 href="#"
                 ><img
@@ -172,12 +174,12 @@
                   width="20px"
                   height="20px"
                 />
-                <span class="smallFontSize_ ms-0 ms-xxl-4">Home</span></a
+                <span class="smallFontSize_  ms-0 ms-xxl-4">Home</span></a
               >
             </li>
             <li class="nav-item">
               <a
-                class="nav-link text-light d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
+                class="nav-link text-light d-flex flex-column flex-xxl-row align-items-lg-center align-items-xxl-start"
                 href="#"
               >
                 <img
@@ -186,12 +188,12 @@
                   width="20px"
                   height="20px"
                 />
-                <span class="smallFontSize_ ms-0 ms-xxl-4">Shorts</span>
+                <span class="smallFontSize_  ms-0 ms-xxl-4">Shorts</span>
               </a>
             </li>
             <li class="nav-item">
               <a
-                class="nav-link text-light d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
+                class="nav-link text-light d-flex flex-column flex-xxl-row align-items-lg-center align-items-xxl-start"
                 href="#"
                 ><img
                   src="/assets/youtubeSubscriptions.png"
@@ -199,27 +201,69 @@
                   width="20px"
                   height="20px"
                 />
-                <span class="smallFontSize_ ms-0 ms-xxl-4"
+                <span class="smallFontSize_  ms-0 ms-xxl-4"
                   >Subscriptions</span
                 ></a
               >
             </li>
-            <li class="nav-item d-lg-inline-block d-xxl-none">
-              <a class="nav-link text-light" href="#"
+            <li class="nav-item">
+              <a
+                class="nav-link text-light d-flex flex-column flex-xxl-row align-items-lg-center align-items-xxl-start"
+                href="#"
                 ><img
                   src="/assets/yourChannel.png"
                   alt=""
-                  class="d-flex flex-lg-column flex-xxl-row align-items-lg-center align-items-xxl-start"
                   width="20px"
                   height="20px"
                 />
-                <span class="smallFontSize_ ms-4 ms-lg-0">You</span></a
+                <span class="smallFontSize_  ms-0 ms-xxl-4"
+                  >You</span
+                ></a
               >
             </li>
           </ul>
-
-          <!-- second row -->
-          <div class="pt-3 border-bottom d-xxl-inline-block">
+        </div>
+        <div class="columnsFromSecond_ position-fixed d-flex flex-column" style="background: #0f0f0f; z-index: 3; height: 100vh;">
+          <!-- to open for responsive -->
+          <div class="sideNav_ pt-3 border-bottom d-xxl-inline-block hide_">
+            <ul class="nav flex-column border-bottom pb-3 mt-2">
+              <li class="nav-item">
+                <a class="nav-link text-light" aria-current="page" href="#"
+                  ><img
+                    src="/assets/home.png"
+                    alt=""
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3">Home</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                  <img
+                    src="/assets/youtubeShorts.png"
+                    alt=""
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3">Shorts</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><img
+                    src="/assets/youtubeSubscriptions.png"
+                    alt=""
+                    width="20px"
+                    height="20px"
+                  />
+                  <span class="ms-3">Subscriptions</span></a
+                >
+              </li>
+            </ul>
+          </div>  
+          <!-- You > (about your activity part) -->
+          <div class="sideNav_ pt-3 border-bottom d-xxl-inline-block hide_">
             <a href="" class="text-light text-decoration-none fs-6 ms-2"
               >You <i class="bi bi-chevron-compact-right"></i
             ></a>
@@ -292,8 +336,8 @@
               </li>
             </ul>
           </div>
-          <!-- third row -->
-          <div class="pt-3 border-bottom d-xxl-inline-block">
+          <!-- Subscriptions -->
+          <div class="sideNav_ pt-3 border-bottom d-xxl-inline-block hide_">
             <a href="" class="text-light text-decoration-none fs-5 ms-2"
               >Subscriptions
             </a>
@@ -384,7 +428,7 @@
             </ul>
           </div>
           <!-- explore section -->
-          <div class="pt-3 border-bottom d-xxl-inline-block">
+          <div class="sideNav_ pt-3 border-bottom d-xxl-inline-block hide_">
             <a href="" class="text-light text-decoration-none fs-5 ms-2"
               >Explore
             </a>
@@ -439,7 +483,7 @@
             </ul>
           </div>
           <!-- more from youtube -->
-          <div class="pt-3 border-bottom d-xxl-inline-block">
+          <div class="sideNav_ pt-3 border-bottom d-xxl-inline-block hide_">
             <a href="" class="text-light text-decoration-none fs-5 ms-2"
               >More
               <span class="">from YouTube </span>
@@ -495,7 +539,7 @@
             </ul>
           </div>
           <!-- settings -->
-          <div class="pt-3 border-bottom d-xxl-inline-block">
+          <div class="sideNav_ pt-3 border-bottom d-xxl-inline-block hide_">
             <a href="" class="text-light text-decoration-none fs-5 ms-2"
               >Explore
             </a>
@@ -550,9 +594,9 @@
             </ul>
           </div>
         </div>
+        </div>
       </div>
-      <div
-        class="col col-xxl-10 col-lg-11 mt-2 d-flex flex-column align-items-center"
+      <div class="col col-xxl-10 col-11 mt-2 d-flex flex-column align-items-center"
       >
         <div
           class="d-flex align-items-center position-sticky w-100"
