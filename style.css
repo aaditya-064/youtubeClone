@@ -1,40 +1,38 @@
-body{
+body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.title_{
+.title_ {
   line-height: 20px;
 }
 
-@media(max-width: 790px){
-  .removeSideNav_{
+@media (max-width: 790px) {
+  .removeSideNav_ {
     transform: translateX(-140%);
   }
-  .smallFontSize_{
+  .smallFontSize_ {
     display: none;
   }
 }
 
-@media (max-width:1290px){
-  .wholeSideNav_{
+@media (max-width: 1290px) {
+  .wholeSideNav_ {
     overflow: hidden !important;
   }
-  .smallFontSize_{
+  .smallFontSize_ {
     font-size: 11px;
   }
-  .hide_{
-    display: none; 
-  }
-  
-  .scrollBar_{
-    overflow-y: scroll;
-  }
-
-  .hide{
+  .hide_ {
     display: none;
+  }
 
+  /* .scrollBar_{
+    overflow-y: scroll;
+  } */
+
+  .hide {
+    display: none;
   }
 }
-
